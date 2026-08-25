@@ -35,7 +35,7 @@ class Analysis(BaseModel):
 @app.post("/analyze")
 def analyze(review: Review):
     response = client.models.generate_content(
-        model="gemini-2.5-flash",
+        model="gemini-3.5-flash",
         contents=(
             "Analyze this customer review.\n"
             "label must be 'positive', 'negative', or 'neutral'.\n"
